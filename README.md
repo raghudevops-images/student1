@@ -28,3 +28,19 @@ Ensure you have database access from the host where you are compiling
 ```
 
 
+### CURL to POST data.
+```
+# curl -H "Content-Type: application/json" -X POST -d '{"studentName": "Ramu", "studentAddr": "Hyderabad", "studentAge": "20", "studentQulaification": "Poly", "studentPercent": "99%", "studentYearPassword": "2017"}' http://35.227.35.98:8080/student
+```
+
+RESPONSE 
+```
+{"httpStatus":201,"status":true,"data":{"message":"Student Saved Successfully","object":{"student_id":1,"studentName":"Ramu","studentAddr":"Hyderabad","studentAge":"20","studentQulaification":"Poly","studentPercent":"99%","studentYearPassword":"2017"}}}
+```
+
+### CURL to list the data.
+```
+# curl http://35.227.35.98:8080/student/list
+{"httpStatus":200,"status":true,"data":{"objects":[{"student_id":1,"studentName":"Ramu","studentAddr":"Hyderabad","studentAge":"20","studentQulaification":"Poly","studentPercent":"99%","studentYearPassword":"2017"}]}}
+
+```
