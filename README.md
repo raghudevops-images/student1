@@ -3,3 +3,28 @@
 Modify src/main/resources/application.properties with the DB details.
 
 Usage :: This is for all DB values hardcoded under src/main/resources/application.properties file
+
+
+### How to COmpile
+```
+mvn clean package
+```
+
+### Pre-Requisites.
+Ensure you have database access from the host where you are compiling
+
+### DB Table
+```
+> use test;
+> CREATE TABLE students(student_id INT NOT NULL AUTO_INCREMENT,
+	student_name VARCHAR(100) NOT NULL,
+        student_addr VARCHAR(100) NOT NULL,
+	student_age VARCHAR(3) NOT NULL,
+	student_qual VARCHAR(20) NOT NULL,
+	student_percent VARCHAR(10) NOT NULL,
+	student_year_passed VARCHAR(10) NOT NULL,
+	PRIMARY KEY (student_id)
+);
+```
+
+
